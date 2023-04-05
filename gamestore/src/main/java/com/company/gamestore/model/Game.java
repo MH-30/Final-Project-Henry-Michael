@@ -1,6 +1,7 @@
 package com.company.gamestore.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -15,16 +16,28 @@ public class Game implements Serializable {
     @Column(name = "game_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer gameId;
+    
     @Column(name = "title", nullable = false)
+    @NotNull()
     private String title;
+    
     @Column(name = "esrb_rating", nullable = false)
+    @NotNull()
     private String esrbRating;
+    
     @Column(name = "description", nullable = false)
+    @NotNull()
     private String description;
+    
     @Column(name = "price", nullable = false)
+    @NotNull()
     private BigDecimal price;
+    
+    @NotNull()
     private Integer quantity;
+    
     @Column(name = "studio", nullable = false)
+    @NotNull()
     private String studio;
 
     public Integer getGameId() {
