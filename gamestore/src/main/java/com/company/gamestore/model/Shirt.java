@@ -16,18 +16,23 @@ public class Shirt implements Serializable {
     @Column(name = "tshirt_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer shirtId;
+    
     @Column(name = "size", nullable = false)
     @NotNull()
     private String size;
+    
     @Column(name = "color", nullable = false)
     @NotNull()
     private String color;
+    
     @Column(name = "quantity", nullable = false)
     @NotNull()
     private Integer quantity;
+    
     @Column(name = "description", nullable = false)
     @NotNull()
     private String description;
+    
     @Column(name = "price", nullable = false)
     @NotNull()
     private BigDecimal price;
