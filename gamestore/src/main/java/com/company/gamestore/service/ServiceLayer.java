@@ -44,7 +44,7 @@ public class ServiceLayer {
     }
 
     public void fillUpTaxes() {
-        //10
+        
         taxMap.put("AL", BigDecimal.valueOf(.05));
         taxMap.put("AK", BigDecimal.valueOf(.06));
         taxMap.put("AZ", BigDecimal.valueOf(.04));
@@ -55,7 +55,7 @@ public class ServiceLayer {
         taxMap.put("DE", BigDecimal.valueOf(.05));
         taxMap.put("FL", BigDecimal.valueOf(.06));
         taxMap.put("GA", BigDecimal.valueOf(.07));
-        //10
+        
         taxMap.put("HI", BigDecimal.valueOf(.05));
         taxMap.put("ID", BigDecimal.valueOf(.03));
         taxMap.put("IL", BigDecimal.valueOf(.05));
@@ -66,7 +66,7 @@ public class ServiceLayer {
         taxMap.put("LA", BigDecimal.valueOf(.05));
         taxMap.put("ME", BigDecimal.valueOf(.03));
         taxMap.put("MD", BigDecimal.valueOf(.07));
-        //10
+        
         taxMap.put("MA", BigDecimal.valueOf(.05));
         taxMap.put("MI", BigDecimal.valueOf(.06));
         taxMap.put("MN", BigDecimal.valueOf(.06));
@@ -77,7 +77,7 @@ public class ServiceLayer {
         taxMap.put("NV", BigDecimal.valueOf(.04));
         taxMap.put("NH", BigDecimal.valueOf(.06));
         taxMap.put("NJ", BigDecimal.valueOf(.05));
-        //10
+        
         taxMap.put("NM", BigDecimal.valueOf(.05));
         taxMap.put("NY", BigDecimal.valueOf(.06));
         taxMap.put("NC", BigDecimal.valueOf(.05));
@@ -88,7 +88,7 @@ public class ServiceLayer {
         taxMap.put("PA", BigDecimal.valueOf(.06));
         taxMap.put("RI", BigDecimal.valueOf(.06));
         taxMap.put("SC", BigDecimal.valueOf(.06));
-        //10
+        
         taxMap.put("SD", BigDecimal.valueOf(.06));
         taxMap.put("TN", BigDecimal.valueOf(.05));
         taxMap.put("TX", BigDecimal.valueOf(.03));
