@@ -1,4 +1,4 @@
-# Final-Project-Henry-Michael Gamestore
+# Final-Project-Henry-Michael Gamestore App
 
 ![Netflix](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white)
 
