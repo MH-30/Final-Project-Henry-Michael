@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
@@ -14,15 +15,17 @@ public class Shirt implements Serializable {
     @Column(name = "tshirt_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer shirtId;
+    @Column(name = "size", nullable = false)
     private String size;
+    @Column(name = "color", nullable = false)
 
     private String color;
-
+    @Column(name = "quantity", nullable = false)
     private Integer quantity;
-
+    @Column(name = "description", nullable = false)
     private String description;
-
-    private Double price;
+    @Column(name = "price", nullable = false)
+    private BigDecimal price;
 
 
     public Integer getQuantity() {
@@ -65,11 +68,11 @@ public class Shirt implements Serializable {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

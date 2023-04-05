@@ -40,6 +40,9 @@ public class InvoiceRepositoryTest {
     @Before
     public void setUp() throws Exception {
         invoiceRepo.deleteAll();
+        gameRepo.deleteAll();
+        consoleRepo.deleteAll();
+        shirtRepo.deleteAll();
     }
 
     @Test
@@ -48,7 +51,7 @@ public class InvoiceRepositoryTest {
         shirt.setColor("Green");
         shirt.setDescription("Netflix Swag");
         shirt.setQuantity(44);
-        shirt.setPrice(20.49);
+        shirt.setPrice(BigDecimal.valueOf(20.49));
         shirt.setSize("Medium");
 
         shirt = shirtRepo.save(shirt);
@@ -63,6 +66,7 @@ public class InvoiceRepositoryTest {
         invoice.setZipcode("33331");
         invoice.setStreet("12345");
         invoice.setCity("Davis");
+
         invoice = invoiceRepo.save(invoice);
         Optional<Invoice> invoiceOptional = invoiceRepo.findById(invoice.getInvoiceId());
         assertEquals(invoiceOptional.get(), invoice);
@@ -109,7 +113,7 @@ public class InvoiceRepositoryTest {
             shirt.setColor("Green");
             shirt.setDescription("Netflix Swag");
             shirt.setQuantity(44);
-            shirt.setPrice(20.49);
+            shirt.setPrice(BigDecimal.valueOf(20.49));
             shirt.setSize("Medium");
 
             shirt = shirtRepo.save(shirt);
@@ -178,7 +182,7 @@ public class InvoiceRepositoryTest {
         shirt.setColor("Green");
         shirt.setDescription("Netflix Swag");
         shirt.setQuantity(44);
-        shirt.setPrice(20.49);
+        shirt.setPrice(BigDecimal.valueOf(20.49));
         shirt.setSize("Medium");
 
         shirt = shirtRepo.save(shirt);

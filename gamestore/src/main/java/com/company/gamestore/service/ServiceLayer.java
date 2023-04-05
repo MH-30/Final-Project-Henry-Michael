@@ -20,24 +20,6 @@ import java.util.Optional;
 @Component
 public class ServiceLayer {
 
-    /*
-    Sales tax applies only to the cost of the items.
-
-Sales tax does not apply to any processing fees for an invoice.
-
-The processing fee is applied only once per order, regardless of the number of items in the order, unless the number of items in the order is greater than 10, in which case an additional processing fee of $15.49 is applied to the order.
-
-The order-processing logic must properly update the quantity available for the item in the order.
-
-Order quantity must be greater than zero.
-
-Order quantity must be less than or equal to the number of items available in the inventory.
-
-The order must contain a valid state code.
-
-The REST API must properly handle and report all violations of business rules.
-     */
-
     private ConsoleRepository consoleRepo;
     private InvoiceRepository invoiceRepo;
     private GameRepository gameRepo;
@@ -150,7 +132,7 @@ The REST API must properly handle and report all violations of business rules.
             Optional<Shirt> shirtOptional = shirtRepo.findById(invoice.getItemId());
             if (shirtOptional.isPresent()) throw new IllegalArgumentException();
             quanityOfItems = shirtOptional.get().getQuantity();
-            priceOfItem = BigDecimal.valueOf(shirtOptional.get().getPrice());
+            priceOfItem = shirtOptional.get().getPrice();
         }
         else {
             Optional<Game> gameOptional = gameRepo.findById(invoice.getItemId());

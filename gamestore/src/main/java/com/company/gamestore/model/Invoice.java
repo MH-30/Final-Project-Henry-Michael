@@ -16,19 +16,31 @@ public class Invoice implements Serializable {
     @Column(name = "invoice_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer invoiceId;
-
+    @Column(name = "name", nullable = false)
     private String name;
+    @Column(name = "street", nullable = false)
     private String street;
+    @Column(name = "city", nullable = false)
     private String city;
+    @Column(name = "state", nullable = false)
     private String state;
+    @Column(name = "zipcode", nullable = false)
     private String zipcode;
+    @Column(name = "item_type", nullable = false)
     private String itemType;
+    @Column(name = "item_id", nullable = false)
     private Integer itemId;
+    //@Column(name = "unit_price", nullable = false)
     private BigDecimal unitPrice;
+    @Column(name = "quantity", nullable = false)
     private Integer quantity;
+
     private BigDecimal subtotal;
+
     private BigDecimal tax;
+
     private BigDecimal processingFee;
+
     private BigDecimal total;
 
     public Integer getInvoiceId() {
