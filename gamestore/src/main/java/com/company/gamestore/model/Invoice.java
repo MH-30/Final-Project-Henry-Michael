@@ -1,6 +1,7 @@
 package com.company.gamestore.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,31 +17,52 @@ public class Invoice implements Serializable {
     @Column(name = "invoice_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer invoiceId;
+    
     @Column(name = "name", nullable = false)
+    @NotNull()
     private String name;
+    
     @Column(name = "street", nullable = false)
+    @NotNull()
     private String street;
+    
     @Column(name = "city", nullable = false)
+    @NotNull()
     private String city;
+    
     @Column(name = "state", nullable = false)
+    @NotNull()
     private String state;
+    
     @Column(name = "zipcode", nullable = false)
+    @NotNull()
     private String zipcode;
     @Column(name = "item_type", nullable = false)
+    @NotNull()
     private String itemType;
+    
     @Column(name = "item_id", nullable = false)
+    @NotNull()
     private Integer itemId;
+    
     //@Column(name = "unit_price", nullable = false)
+    @NotNull()
     private BigDecimal unitPrice;
+    
     @Column(name = "quantity", nullable = false)
+    @NotNull()
     private Integer quantity;
-
+    
+    @NotNull()
     private BigDecimal subtotal;
-
+    
+    @NotNull()
     private BigDecimal tax;
-
+    
+    @NotNull()
     private BigDecimal processingFee;
-
+    
+    @NotNull()
     private BigDecimal total;
 
     public Integer getInvoiceId() {
