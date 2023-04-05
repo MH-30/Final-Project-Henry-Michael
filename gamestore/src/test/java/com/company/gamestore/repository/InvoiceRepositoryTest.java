@@ -74,7 +74,7 @@ public class InvoiceRepositoryTest {
         game.setTitle("AroundTown");
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game = gameRepo.save(game);
@@ -100,7 +100,7 @@ public class InvoiceRepositoryTest {
             game.setTitle("AroundTown");
             game.setEsrbRating("solid");
             game.setDescription("Nice game");
-            game.setPrice(42.00);
+            game.setPrice(BigDecimal.valueOf(42.00));
             game.setQuantity(10);
             game.setStudio("Epic");
             game = gameRepo.save(game);
@@ -169,7 +169,7 @@ public class InvoiceRepositoryTest {
         game.setTitle("AroundTown");
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game = gameRepo.save(game);

@@ -1,10 +1,10 @@
 package com.company.gamestore.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.sun.istack.NotNull;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
@@ -22,7 +22,7 @@ public class Game implements Serializable {
     @Column(name = "description", nullable = false)
     private String description;
     @Column(name = "price", nullable = false)
-    private Double price;
+    private BigDecimal price;
     private Integer quantity;
     @Column(name = "studio", nullable = false)
     private String studio;
@@ -57,11 +57,11 @@ public class Game implements Serializable {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -81,10 +81,11 @@ public class Game implements Serializable {
         this.studio = studio;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Game)) return false;
         Game game = (Game) o;
         return Objects.equals(gameId, game.gameId) && Objects.equals(title, game.title) && Objects.equals(esrbRating, game.esrbRating) && Objects.equals(description, game.description) && Objects.equals(price, game.price) && Objects.equals(quantity, game.quantity) && Objects.equals(studio, game.studio);
     }

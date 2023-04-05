@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,7 +35,7 @@ public class GameRepositoryTest {
         game.setTitle("AroundTown");
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         // Convert author object into Json
@@ -49,7 +50,7 @@ public class GameRepositoryTest {
         game.setTitle("AroundTown");
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game = gameRepo.save(game);
@@ -63,14 +64,14 @@ public class GameRepositoryTest {
         game.setTitle("AroundTown");
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game = gameRepo.save(game);
 
         game.setEsrbRating("fine");
         game.setDescription("Fine game");
-        game.setPrice(50.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(12);
         game.setStudio("Icon");
         game = gameRepo.save(game);
@@ -84,7 +85,7 @@ public class GameRepositoryTest {
         game.setTitle("AroundTown");
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game = gameRepo.save(game);
@@ -101,7 +102,7 @@ public class GameRepositoryTest {
         game1.setTitle("AroundTown");
         game1.setEsrbRating("solid");
         game1.setDescription("Nice game");
-        game1.setPrice(42.00);
+        game1.setPrice(BigDecimal.valueOf(42.00));
         game1.setQuantity(10);
         game1.setStudio("Epic");
 
@@ -109,7 +110,7 @@ public class GameRepositoryTest {
         game2.setTitle("AroundTown");
         game2.setEsrbRating("fine");
         game2.setDescription("Fine game");
-        game2.setPrice(50.00);
+        game2.setPrice(BigDecimal.valueOf(50.00));
         game2.setQuantity(12);
         game2.setStudio("Icon");
 
@@ -117,7 +118,7 @@ public class GameRepositoryTest {
         game3.setTitle("AroundTown");
         game3.setEsrbRating("awesome");
         game3.setDescription("awesome game");
-        game3.setPrice(37.00);
+        game3.setPrice(BigDecimal.valueOf(37.00));
         game3.setQuantity(15);
         game3.setStudio("Dynamic");
 
@@ -134,7 +135,7 @@ public class GameRepositoryTest {
         game.setTitle("AroundTown");
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game = gameRepo.save(game);
@@ -145,7 +146,7 @@ public class GameRepositoryTest {
         game2.setTitle("AroundTown");
         game2.setEsrbRating("fine");
         game2.setDescription("Fine game");
-        game2.setPrice(50.00);
+        game2.setPrice(BigDecimal.valueOf(50.00));
         game2.setQuantity(12);
         game2.setStudio("Icon");
 
@@ -155,7 +156,7 @@ public class GameRepositoryTest {
         game3.setTitle("AroundTown");
         game3.setEsrbRating("awesome");
         game3.setDescription("awesome game");
-        game3.setPrice(37.00);
+        game3.setPrice(BigDecimal.valueOf(37.00));
         game3.setQuantity(15);
         game3.setStudio("Epic");
 
@@ -171,7 +172,7 @@ public class GameRepositoryTest {
         game.setTitle("AroundTown");
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game = gameRepo.save(game);
@@ -182,7 +183,7 @@ public class GameRepositoryTest {
         game2.setTitle("AroundTown");
         game2.setEsrbRating("awesome");
         game2.setDescription("Fine game");
-        game2.setPrice(50.00);
+        game2.setPrice(BigDecimal.valueOf(50.00));
         game2.setQuantity(12);
         game2.setStudio("Icon");
 
@@ -192,7 +193,7 @@ public class GameRepositoryTest {
         game3.setTitle("AroundTown");
         game3.setEsrbRating("awesome");
         game3.setDescription("awesome game");
-        game3.setPrice(37.00);
+        game3.setPrice(BigDecimal.valueOf(37.00));
         game3.setQuantity(15);
         game3.setStudio("Epic");
 
@@ -208,7 +209,7 @@ public class GameRepositoryTest {
         game.setTitle("AroundTown");
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game = gameRepo.save(game);
@@ -219,7 +220,7 @@ public class GameRepositoryTest {
         game2.setTitle("AroundTown");
         game2.setEsrbRating("fine");
         game2.setDescription("Fine game");
-        game2.setPrice(50.00);
+        game2.setPrice(BigDecimal.valueOf(50.00));
         game2.setQuantity(12);
         game2.setStudio("Icon");
 
@@ -229,7 +230,7 @@ public class GameRepositoryTest {
         game3.setTitle("CityLights");
         game3.setEsrbRating("awesome");
         game3.setDescription("awesome game");
-        game3.setPrice(37.00);
+        game3.setPrice(BigDecimal.valueOf(37.00));
         game3.setQuantity(15);
         game3.setStudio("Epic");
 

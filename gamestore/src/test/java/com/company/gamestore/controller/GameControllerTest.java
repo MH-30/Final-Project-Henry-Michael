@@ -13,6 +13,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
+import java.math.BigDecimal;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -36,7 +38,7 @@ public class GameControllerTest {
         Game game = new Game();
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
 
@@ -51,7 +53,7 @@ public class GameControllerTest {
         Game game = new Game();
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game.setGameId(1);
@@ -66,7 +68,7 @@ public class GameControllerTest {
         Game game = new Game();
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game.setGameId(1);
@@ -74,7 +76,7 @@ public class GameControllerTest {
 
         game.setEsrbRating("not solid");
         game.setDescription("not Nice game");
-        game.setPrice(40.00);
+        game.setPrice(BigDecimal.valueOf(40.00));
         game.setQuantity(11);
         game.setStudio("Not Epic");
 
@@ -94,7 +96,7 @@ public class GameControllerTest {
         Game game = new Game();
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game.setGameId(1);
@@ -109,21 +111,21 @@ public class GameControllerTest {
         Game game1 = new Game();
         game1.setEsrbRating("solid");
         game1.setDescription("Nice game");
-        game1.setPrice(42.00);
+        game1.setPrice(BigDecimal.valueOf(42.00));
         game1.setQuantity(10);
         game1.setStudio("Epic");
 
         Game game2 = new Game();
         game2.setEsrbRating("fine");
         game2.setDescription("Fine game");
-        game2.setPrice(50.00);
+        game2.setPrice(BigDecimal.valueOf(50.00));
         game2.setQuantity(12);
         game2.setStudio("Icon");
 
         Game game3 = new Game();
         game3.setEsrbRating("awesome");
         game3.setDescription("awesome game");
-        game3.setPrice(37.00);
+        game3.setPrice(BigDecimal.valueOf(37.00));
         game3.setQuantity(15);
         game3.setStudio("Dynamic");
 
@@ -141,7 +143,7 @@ public class GameControllerTest {
         Game game = new Game();
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         gameRepo.save(game);
@@ -156,7 +158,7 @@ public class GameControllerTest {
         Game game = new Game();
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         gameRepo.save(game);
@@ -170,7 +172,7 @@ public class GameControllerTest {
         Game game = new Game();
         game.setEsrbRating("solid");
         game.setDescription("Nice game");
-        game.setPrice(42.00);
+        game.setPrice(BigDecimal.valueOf(42.00));
         game.setQuantity(10);
         game.setStudio("Epic");
         game.setTitle("NBA2k");

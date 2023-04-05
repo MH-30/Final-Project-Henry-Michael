@@ -46,10 +46,6 @@ The REST API must properly handle and report all violations of business rules.
     private HashMap<String, BigDecimal> feeMap;
 
     public ServiceLayer() {
-        /*taxMap = new HashMap<String, Double>();
-        feeMap = new HashMap<String, Double>();
-        fillUpTaxes();
-        fillUpFees();*/
     }
 
     @Autowired
@@ -160,7 +156,7 @@ The REST API must properly handle and report all violations of business rules.
             Optional<Game> gameOptional = gameRepo.findById(invoice.getItemId());
             if (gameOptional.isPresent()) throw new IllegalArgumentException();
             quanityOfItems = gameOptional.get().getQuantity();
-            priceOfItem = BigDecimal.valueOf(gameOptional.get().getPrice());
+            priceOfItem = gameOptional.get().getPrice();
         }
 
         if (quanityOfItems > invoice.getQuantity() || quanityOfItems <= 0) throw new IllegalArgumentException();
