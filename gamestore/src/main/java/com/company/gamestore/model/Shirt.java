@@ -1,6 +1,7 @@
 package com.company.gamestore.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,15 +17,19 @@ public class Shirt implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer shirtId;
     @Column(name = "size", nullable = false)
+    @NotNull()
     private String size;
     @Column(name = "color", nullable = false)
-
+    @NotNull()
     private String color;
     @Column(name = "quantity", nullable = false)
+    @NotNull()
     private Integer quantity;
     @Column(name = "description", nullable = false)
+    @NotNull()
     private String description;
     @Column(name = "price", nullable = false)
+    @NotNull()
     private BigDecimal price;
 
 
