@@ -15,21 +15,27 @@ public class Console implements Serializable {
     @Column(name = "console_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer consoleId;
+    
     @Column(name = "model", nullable = false)
     @NotNull()
     private String model;
+    
     @Column(name = "manufacturer", nullable = false)
     @NotNull()
     private String manufacturer;
+    
     @Column(name = "processor", nullable = false)
     @NotNull()
     private String processor;
+    
     @Column(name = "memory_amount", nullable = false)
     @NotNull()
     private String memoryAmount;
+    
     @Column(name = "price", nullable = false)
     @NotNull()
     private Double price;
+    
     @Column(name = "quantity", nullable = false)
     @NotNull()
     private Integer quantity;
